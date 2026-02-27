@@ -27,11 +27,11 @@ ext {
 
 android {
     namespace 'com.github.barteksc.pdfviewer'
-    compileSdkVersion 36
+    compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 36
+        targetSdkVersion 35
     }
 
     compileOptions {
@@ -49,9 +49,6 @@ android {
         }
     }
 
-    // Enable 16 KB page size support for native libraries
-    ndkVersion "28.0.12433566"  // Use NDK r28+ for 16 KB support
-
     // Disable lint for now to focus on 16 KB compatibility
     lint {
         abortOnError false
@@ -65,7 +62,7 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core:1.17.0'
+    implementation 'androidx.core:core:1.15.0'
     api 'io.github.oothp:pdfium-android:1.9.5-beta01'
 }
 
